@@ -86,3 +86,12 @@ def search_flight(request: FlightSearchRequest):
 @app.get("/")
 def root():
     return {"status": "Flight Price Tracker API is running."}
+
+
+# ─── Local dev entry point ────────────────────────────────────────────────────
+
+if __name__ == "__main__":
+    import uvicorn
+    # Run with: python main.py
+    # On Render, uvicorn is started via the start command instead
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
