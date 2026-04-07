@@ -1,0 +1,224 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Centers the card on screen */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  min-height: 100vh;
+}
+
+/* White card that holds the form */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Header section */
+.header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  color: #1a56db;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Each input group */
+.field {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.field label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.1);
+}
+
+.field small {
+  display: block;
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 4px;
+}
+
+/* From → To side-by-side layout */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.row .field {
+  margin-bottom: 0;
+}
+
+/* Arrow between From and To */
+.arrow {
+  font-size: 1.4rem;
+  color: #1a56db;
+  padding-top: 20px;
+  flex-shrink: 0;
+}
+
+/* Price input with $ prefix */
+.price-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.price-input:focus-within {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.1);
+}
+
+.currency {
+  padding: 10px 12px;
+  background: #f3f4f6;
+  color: #555;
+  font-size: 0.95rem;
+  border-right: 1px solid #d1d5db;
+}
+
+.price-input input {
+  border: none;
+  border-radius: 0;
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.price-input input:focus {
+  box-shadow: none;
+}
+
+/* Required / optional labels */
+.required {
+  color: #e53e3e;
+}
+
+.optional {
+  font-weight: 400;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* Error message */
+.error {
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  color: #c53030;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+/* Submit button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #1a56db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 4px;
+}
+
+.btn:hover:not(:disabled) {
+  background: #1648c0;
+}
+
+.btn:disabled {
+  background: #93ade8;
+  cursor: not-allowed;
+}
+
+/* Success card */
+.success-card {
+  text-align: center;
+  padding: 48px 32px;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  background: #c6f6d5;
+  color: #276749;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.success-card h2 {
+  font-size: 1.5rem;
+  color: #276749;
+  margin-bottom: 12px;
+}
+
+.success-card p {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.success-card .btn {
+  margin-top: 24px;
+  max-width: 240px;
+}
