@@ -113,7 +113,7 @@ function FlightTracker() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/search", {
+      const response = await fetch("https://flight-alert-app.onrender.com/search", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
