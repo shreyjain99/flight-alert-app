@@ -1,7 +1,70 @@
 import React, { useState } from "react";
 import "./App.css";
 
+// ─── Login Screen ─────────────────────────────────────────────────────────────
+
+function LoginForm({ onLogin }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (username === "flighttrackertest" && password === "test123") {
+      onLogin();
+    } else {
+      setError("Invalid credentials");
+    }
+  };
+
+  return (
+    <div className="container">
+      <div className="card">
+        <div className="header">
+          <h1>✈ Flight Price Tracker</h1>
+          <p>Please log in to continue.</p>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="field">
+            <label>Username</label>
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="field">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          {error && <div className="error">{error}</div>}
+          <button type="submit" className="btn">Log In</button>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+// ─── Main App ─────────────────────────────────────────────────────────────────
+
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  // Show login screen until credentials are verified
+  if (!loggedIn) {
+    return <LoginForm onLogin={() => setLoggedIn(true)} />;
+  }
+
+  return <FlightTracker />;
+}
+
+function FlightTracker() {
   // Form field state
   const [form, setForm] = useState({
     from: "",
