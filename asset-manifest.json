@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/flight-alert-app/static/css/main.3a99c6f3.css",
+    "main.js": "/flight-alert-app/static/js/main.754c90dd.js",
+    "static/js/453.825386d9.chunk.js": "/flight-alert-app/static/js/453.825386d9.chunk.js",
+    "index.html": "/flight-alert-app/index.html",
+    "main.3a99c6f3.css.map": "/flight-alert-app/static/css/main.3a99c6f3.css.map",
+    "main.754c90dd.js.map": "/flight-alert-app/static/js/main.754c90dd.js.map",
+    "453.825386d9.chunk.js.map": "/flight-alert-app/static/js/453.825386d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a99c6f3.css",
+    "static/js/main.754c90dd.js"
+  ]
+}
